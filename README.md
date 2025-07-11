@@ -1,4 +1,4 @@
-# User Profile Service
+# User Profile Microservice
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.12-green?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![PostgreSQL/PostGIS](https://img.shields.io/badge/PostGIS-16--3.5-blue?logo=postgresql)](https://postgis.net/)
@@ -10,7 +10,7 @@
 
 ## Описание
 
-**User Profile Service** — это асинхронный микросервис для управления профилями
+Асинхронный микросервис для управления профилями
 пользователей с поддержкой геолокационного поиска, кэширования и JWT-аутентификации.
 Сервис построен на FastAPI, использует PostgreSQL с расширением PostGIS для хранения
 геоданных и Redis для кэширования.
