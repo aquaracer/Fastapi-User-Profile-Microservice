@@ -61,7 +61,7 @@
 ```bash
 mkdir user_profile_service
 cd user_profile_service
-git clone https://github.com/aquaracer/Fastapi-Auth-API-Gateway.git
+git clone https://github.com/aquaracer/Fastapi-User-Profile-Microservice.git
 ```
 
 2. Настройте переменные окружения в файле .env
