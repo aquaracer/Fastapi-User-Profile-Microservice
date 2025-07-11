@@ -5,6 +5,11 @@
 [![Redis](https://img.shields.io/badge/Redis-5.2.1-red?logo=redis)](https://redis.io/)
 [![Docker Compose](https://img.shields.io/badge/Docker--Compose-3.9-blue?logo=docker)](https://docs.docker.com/compose/)
 [![Python](https://img.shields.io/badge/Python->=3.10-blue?logo=python)](https://www.python.org/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0.40-red?logo=sqlalchemy)](https://www.sqlalchemy.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-24.0.7-blue?logo=docker)](https://www.docker.com/)
+[![Pydantic](https://img.shields.io/badge/Pydantic-2.8.1-green?logo=pydantic)](https://docs.pydantic.dev/)
+[![ruff](https://img.shields.io/badge/ruff-0.12.2-yellow?logo=python)](https://docs.astral.sh/ruff/)
 
 ---
 
