@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+
+  app:
+    container_name: user_profile_service
+    build: .
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/app
+    restart: always
+    environment:
+      - .env
+    networks:
+      - app-network
+
+  db:
+    image: postgis/postgis:16-3.5-alpine
+    container_name: user_profile_db
+    restart: always
+    shm_size: 128mb
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  cache:
+    image: redis/redis-stack:latest
+    container_name: user_profile_cache
+    restart: always
+    ports:
+      - '6379:6379'
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
+
+
+volumes:
+  pgdata:
