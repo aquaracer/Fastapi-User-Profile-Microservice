@@ -27,10 +27,8 @@ class Settings(BaseSettings):
     JWT_ENCODE_ALGORITHM: str = os.getenv("JWT_ENCODE_ALGORITHM")
 
     @property
-    def db_url(self):
-        return (
-            f"{self.DB_DRIVER} - FORBIDDEN - {self.DB_USER}:{self.DB_PASSWORD}"
-            f"@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
-        )
+    def db_url(self) -> str:
+        return (f"{self.DB_DRIVER}://{self.DB_USER}:{self.DB_PASSWORD}"
+                f"@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}")
 
 

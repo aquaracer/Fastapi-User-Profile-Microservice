@@ -145,7 +145,7 @@ dump.rdb
 *.pid.lock
 
 # Prometheus
-prometheus.yml
+infrastructure/prometheus/prometheus.yml
 prometheus_data/
 
 # Grafana

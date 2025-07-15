@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from prometheus_fastapi_instrumentator import Instrumentator
 
 from src.config.project_config import Settings
 from src.routes import get_apps_router
@@ -26,3 +27,4 @@ def get_application() -> FastAPI:
 
 
 app = get_application()
+Instrumentator().instrument(app).expose(app)

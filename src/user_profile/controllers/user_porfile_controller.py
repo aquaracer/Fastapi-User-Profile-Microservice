@@ -1,3 +1,4 @@
+import logging
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -21,6 +22,13 @@ from src.user_profile.services.user_profile_service import UserProfileService
 router = APIRouter(prefix="/user_profile", tags=["user_profile"])
 
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+logger = logging.getLogger(__name__)
+
 @router.post("", response_model=UserProfileSchema)
 async def create_user_profile(
         body: UserProfileCreateSchema,
@@ -32,6 +40,7 @@ async def create_user_profile(
 ):
     """Создание профиля пользователя"""
     try:
+        logger.info(f"Hello from User Profile!")
         return await user_profile_service.create_user_profile(
             body=body, user_id=user_id
         )
